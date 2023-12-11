@@ -12,14 +12,14 @@ pipeline {
         stage('Build') {
             steps {
                 // Compile the Java application
-                sh 'javac -cp ./main.java'
+                sh 'javac -cp . main.java'
             }
         }
 
         stage('Run') {
             steps {
                 // Run the Java application
-                sh 'java -cp ./main'
+                sh 'java -cp . main'
             }
         }
     }
